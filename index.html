@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUITE CRAZY | WE PRINT LIVE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Plus+Jakarta+Sans:wght@400;800&display=swap');
+        
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-yellow: #ccff00;
+            --neon-blue: #00f0ff;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            color: #1a1a1a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .grain {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Resolution_White_Noise_Video_Frame.png');
+            opacity: 0.07; pointer-events: none; z-index: 9999;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(45deg, #ff00ff, #00f0ff, #ccff00);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            background: #000;
+            color: #fff;
+            padding: 10px 0;
+            font-family: 'Syncopate', sans-serif;
+        }
+
+        .crazy-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .crazy-card:hover {
+            transform: rotate(-3deg) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <!-- Header -->
+    <nav class="fixed w-full z-50 mix-blend-difference text-white p-6 flex justify-between items-center">
+        <div class="text-2xl font-black tracking-tighter uppercase">QuiteCrazy.</div>
+        <div class="hidden md:flex space-x-10 uppercase text-xs font-bold">
+            <a href="#story">Our Story</a>
+            <a href="#shop">Drop</a>
+            <a href="mailto:anythingworks.main@outlook.com" class="bg-white text-black px-4 py-2 rounded-full">Hit Us Up</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center p-6 hero-gradient">
+        <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter text-white drop-shadow-2xl" data-aos="zoom-in">
+            CRAZY<br>ENERGY
+        </h1>
+        <p class="mt-6 text-xl font-bold bg-black text-white px-6 py-2 rounded-full" data-aos="fade-up" data-aos-delay="300">
+            WE PRINT IT LIVE. YOU WEAR THE VIBE.
+        </p>
+    </section>
+
+    <!-- Moving Marquee -->
+    <div class="marquee uppercase font-bold text-xl">
+        <div class="inline-block animate-marquee">
+            LIVE PRINTING • CUSTOM DRIPS • JERSEYS • NO RULES • LIVE PRINTING • CUSTOM DRIPS • JERSEYS • NO RULES • 
+        </div>
+    </div>
+
+    <!-- Story Section 1 -->
+    <section id="story" class="py-24 px-6 grid md:grid-cols-2 gap-12 items-center bg-white">
+        <div data-aos="fade-right">
+            <span class="text-pink-600 font-bold uppercase tracking-widest">01. The Concept</span>
+            <h2 class="text-5xl font-black mt-4 leading-none">Tired of boring <br><span class="text-blue-500 italic">ready-made?</span></h2>
+            <p class="mt-6 text-lg text-gray-600">
+                At QuiteCrazy, we don't believe in stockrooms. When you choose a design, we bring the machine out. 
+                You watch the ink hit the fabric. You feel the heat of the press. It’s not just a T-shirt; it’s a performance.
+            </p>
+        </div>
+        <div class="relative" data-aos="zoom-out-up">
+            <div class="absolute -top-10 -left-10 w-32 h-32 bg-yellow-300 rounded-full z-0 animate-bounce"></div>
+            <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&q=80&w=1000" class="relative z-10 rounded-2xl shadow-2xl border-8 border-black rotate-2" alt="Process">
+        </div>
+    </section>
+
+    <!-- Story Section 2: Custom -->
+    <section class="py-24 px-6 bg-black text-white text-center">
+        <div data-aos="fade-up">
+            <h2 class="text-6xl font-black mb-8 text-yellow-400">YOU DESIGN. WE ALIGN.</h2>
+            <p class="max-w-2xl mx-auto text-xl text-gray-400">
+                Got a meme? A sketch? A photo of your cat? Send it to us, and we'll print it on a premium heavy-weight tee in front of your eyes. No gatekeeping.
+            </p>
+            <div class="mt-12 flex flex-wrap justify-center gap-6">
+                <div class="p-8 border-2 border-dashed border-gray-700 rounded-xl hover:border-blue-400 transition-colors">
+                    <h3 class="text-2xl font-bold">Jerseys</h3>
+                    <p class="text-sm text-gray-500">Retro fits, modern fabric.</p>
+                </div>
+                <div class="p-8 border-2 border-dashed border-gray-700 rounded-xl hover:border-pink-400 transition-colors">
+                    <h3 class="text-2xl font-bold">Custom Drops</h3>
+                    <p class="text-sm text-gray-500">Your art, our canvas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section id="shop" class="py-24 px-6">
+        <h2 class="text-4xl font-black mb-12 uppercase tracking-tighter" data-aos="fade-left">Current Chaos Drop_</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Shirt 1 -->
+            <div class="crazy-card bg-pink-100 p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800" class="w-full mix-blend-multiply">
+                <h3 class="text-2xl font-black mt-6">"ELECTRIC CHAOS" TEE</h3>
+                <p class="font-bold text-pink-600">₹1,299</p>
+                <button class="mt-4 w-full bg-black text-white py-3 font-bold uppercase rounded-lg">Grab This</button>
+            </div>
+            <!-- Shirt 2 -->
+            <div class="crazy-card bg-blue-100 p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&q=80&w=800" class="w-full mix-blend-multiply">
+                <h3 class="text-2xl font-black mt-6">"LIVE SESSION" DROP</h3>
+                <p class="font-bold text-blue-600">₹1,599</p>
+                <button class="mt-4 w-full bg-black text-white py-3 font-bold uppercase rounded-lg">Grab This</button>
+            </div>
+            <!-- Shirt 3 -->
+            <div class="crazy-card bg-yellow-100 p-8 rounded-3xl border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80&w=800" class="w-full mix-blend-multiply">
+                <h3 class="text-2xl font-black mt-6">"NEON RETRO" JERSEY</h3>
+                <p class="font-bold text-yellow-600">₹2,199</p>
+                <button class="mt-4 w-full bg-black text-white py-3 font-bold uppercase rounded-lg">Grab This</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-blue-600 text-white text-center">
+        <h2 class="text-6xl font-black px-4 italic" data-aos="zoom-out">WANNA COLLAB OR ORDER BULK?</h2>
+        <p class="mt-6 text-xl mb-10">Demand is high. Supply is QuiteCrazy.</p>
+        <a href="mailto:anythingworks.main@outlook.com" class="bg-white text-blue-600 px-12 py-6 rounded-full text-2xl font-black uppercase shadow-2xl hover:bg-yellow-300 hover:text-black transition-all">
+            Email Us Now
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-10 text-center bg-black text-gray-500 uppercase text-xs tracking-widest">
+        QuiteCrazy Brand © 2026 | Built for the loud ones.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
